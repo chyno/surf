@@ -1,0 +1,14 @@
+{
+  "name": "surf",
+  "version": "1.0.0",
+  "description": "surf report app",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --harmony node_modules\\mocha\\bin\\mocha    ./test/* --compilers js:mocha-traceur "
+  },
+  "author": "John",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^2.3.3"
+  }
+}
