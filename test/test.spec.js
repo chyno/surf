@@ -1,5 +1,5 @@
 	var assert = require("assert");
-	import {Foo} from './foo';
+	import {Foo} from '../foo';
 	
 	describe("First Tests", ()  => {
 		describe("Get something to work", () => {
