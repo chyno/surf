@@ -9,4 +9,9 @@ export class SurfLookup
 	{
 		return new SurfReport('20', '30', 'SW', '50');
 	}
+	
+	GetLastZip(email)
+	{
+		return "22207";
+	}
 }

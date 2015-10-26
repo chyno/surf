@@ -2,33 +2,42 @@
 	import {SurfLookup} from '../processes/surf-lookup';
 	import {SurfReport} from '../models/surf-report';
 	
-	describe("View Surf Report", ()  => {
-		var surfReport;
-		
-		 
+	describe("As a surfer I wan a forcast based on zip", ()  => {
+		var surfReport, result;
 		
 		before(() => {
-			//arrange the data
-			
 			surfReport = new SurfLookup();
+			 result = surfReport.getSurfReport('22207');
 		});
 		
-		describe("Get a valid SUrf report given a valid zip", () => {
+		describe("Get a valid Surf report given a valid zip", () => {
 			it("get a report object", () => {
-				var result = surfReport.getSurfReport('22207');
 				assert(result);
 			} );
 			
-			it("sur report has temperature", () => {
-				var result = surfReport.getSurfReport('22207');
+			it("Surf report has temperature", () => {
+				
 				assert(result.temp);
 			} );
 			
-			it("sur report has temperature", () => {
-				var result = surfReport.getSurfReport('22207');
-				assert(result.temp);
-			} );
+			it("Surf report has direction", () => {
+				assert(result.direction);
+			} ); 
 			
+			it("Surf report has gust", () => {
+				assert(result.gust);
+			} ); 
+		});
+		
+		describe("Get a valid Surf report given based on previos zip", () => {
+			 
+			
+			it("Surf report has temperature", () => {
+				
+				 var lastZip = surfReport.GetLastZip("foo@yahoo.com");
+				 assert(lastZip);
+				 
+			} );
 			
 			 
 		});
