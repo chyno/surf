@@ -1,1 +1,1 @@
- 
+ require('require-dir')('publis/app/build/tasks');
