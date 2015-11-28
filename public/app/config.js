@@ -44,6 +44,7 @@ System.config({
     "core-js": "npm:core-js@1.2.1",
     "fetch": "github:github/fetch@0.9.0",
     "font-awesome": "npm:font-awesome@4.4.0",
+    "ramda": "npm:ramda@0.18.0",
     "text": "github:systemjs/plugin-text@0.0.2",
     "github:aurelia/animator-css@0.17.0": {
       "aurelia-metadata": "github:aurelia/metadata@0.9.0",
@@ -209,6 +210,9 @@ System.config({
     },
     "npm:process@0.11.2": {
       "assert": "github:jspm/nodelibs-assert@0.1.0"
+    },
+    "npm:ramda@0.18.0": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:util@0.10.3": {
       "inherits": "npm:inherits@2.0.1",

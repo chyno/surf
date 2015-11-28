@@ -1,7 +1,7 @@
 import {PageObject_Welcome} from './welcome.po.js';
 import {PageObject_Skeleton} from './skeleton.po.js';
 
-describe('aurelia skeleton app', function() {
+xdescribe('aurelia skeleton app', function() {
   var po_welcome,
       po_skeleton;
 

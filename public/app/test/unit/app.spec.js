@@ -9,7 +9,7 @@ class RouterStub {
   }
 }
 
-describe('the App module', () => {
+xdescribe('the App module', () => {
   var sut
     , mockedRouter;
 

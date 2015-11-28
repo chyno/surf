@@ -4,7 +4,7 @@ var _welcomePoJs = require('./welcome.po.js');
 
 var _skeletonPoJs = require('./skeleton.po.js');
 
-describe('aurelia skeleton app', function () {
+xdescribe('aurelia skeleton app', function () {
   var po_welcome, po_skeleton;
 
   beforeEach(function () {

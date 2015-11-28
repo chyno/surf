@@ -1,6 +1,10 @@
 var gulp = require('gulp');
 var karma = require('karma').server;
 
+gulp.task('foo', function (done) {
+    console.log('foo test ');
+    done();
+});
 /**
  * Run test once and exit
  */
@@ -9,7 +13,7 @@ gulp.task('test', function (done) {
         configFile: __dirname + '/../../karma.conf.js',
         singleRun: true
     }, function(e) {
-        done();
+       done();
     });
 });
 
@@ -31,7 +35,7 @@ gulp.task('cover', function (done) {
   karma.start({
     configFile: __dirname + '/../../karma.conf.js',
     singleRun: true,
-    reporters: ['coverage'],
+    reporters: ['coverage'], 
     preprocessors: {
       'test/**/*.js': ['babel'],
       'src/**/*.js': ['babel', 'coverage']

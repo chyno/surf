@@ -14,7 +14,7 @@ class HttpStub {
 
 describe('the Users module', () => {
 
-  it('sets fetch response to users', (done) => {
+  xit('sets fetch response to users', (done) => {
     var http = new HttpStub(),
         sut = new Users(http),
         itemStubs = [1],
