@@ -3,8 +3,8 @@
 	import {SurfReport} from '../models/surf-report';
 	import { cords, forcast } from '../lib/forcast';
 	
-	describe("As a user I want to get forcast", ()  => {
-		 var crsp  = true;
+	xdescribe("As a user I want to get lat longitude", ()  => {
+		 var crsp;
 		before((done) => {
 			 cords('22207')
 			  .then((res) =>
@@ -18,13 +18,28 @@
 			it("get a cords object object", () => {
 				 
 				assert(this.crsp.location.lat);
-				assert(this.crsp.location.lng);
-				
+				assert(this.crsp.location.lng);	
 			} ); 
-			
+		});			 
+	});
+	
+	
+	describe("As a user I want to get forcast", ()  => {
+		 var frcst;
+		before((done) => {
+			//38.932453,-77.081608
+			 forcast('38.932453','-77.081608')
+			  .then((res) =>
+				{
+					 this.frcst = res;
+					 done();
+				});
+		});
+		
+		describe("Get a valid Surf report given a valid zip", () => {
 			it("get a forcast object object", () => {
-				var result = forcast('12', '33');
-				assert(result);
+				 assert(this.frcst.currently.windSpeed);
+				 assert(this.frcst.currently.windBearing);
 			} ); 
 		});
 				 
