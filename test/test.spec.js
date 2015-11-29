@@ -3,17 +3,23 @@
 	import {SurfReport} from '../models/surf-report';
 	import { cords, forcast } from '../lib/forcast';
 	
-	describe("As a surfer I wan a forcast based on zip", ()  => {
-		 
-		
-		before(() => {
-			 
+	describe("As a user I want to get forcast", ()  => {
+		 var crsp  = true;
+		before((done) => {
+			 cords('22207')
+			  .then((res) =>
+				{
+					 this.crsp = res.results[0].geometry;
+					 done();
+				});
 		});
 		
 		describe("Get a valid Surf report given a valid zip", () => {
 			it("get a cords object object", () => {
-				var result = cords('22207');
-				assert(result);
+				 
+				assert(this.crsp.location.lat);
+				assert(this.crsp.location.lng);
+				
 			} ); 
 			
 			it("get a forcast object object", () => {

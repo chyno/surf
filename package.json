@@ -8,7 +8,7 @@
     "start:dev": "node app.js 4000",
     "lint": "node node_modules\\jshint\\bin\\jshint .",
     "pretest": "npm run lint",
-    "test": "node --harmony node_modules\\mocha\\bin\\mocha  ./test/*  --compilers js:mocha-traceur --watch",
+    "test": "node --harmony node_modules\\mocha\\bin\\mocha  ./test/*  --compilers js:mocha-traceur --watch ",
     "testw": "npm run test --  -R min -w",
     "watch:lint": "watch 'npm run lint'",
     "watch:server": "nodemon  app.js"
@@ -23,6 +23,7 @@
     "github": "^0.2.4",
     "github-download": "*",
     "mocha": "^2.3.3",
+    "request-promise": "^1.0.2",
     "require-dir": "^0.3.0",
     "swig": "^1.4.2"
   },
